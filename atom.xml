@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Vision</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-05-10T04:01:30.980Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>wjun7</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test2</title>
+    <link href="http://yoursite.com/2019/05/10/test2/"/>
+    <id>http://yoursite.com/2019/05/10/test2/</id>
+    <published>2019-05-10T03:54:23.000Z</published>
+    <updated>2019-05-10T04:01:30.980Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="深入理解jvm内存区域"><a href="#深入理解jvm内存区域" class="headerlink" title="深入理解jvm内存区域"></a>深入理解jvm内存区域</h1><h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2><p>阿什顿发多少发斯蒂芬击溃了； 阿圣诞节快乐氟化钠单身快乐；妇女节课；拉屎的年份里卡羧甲淀粉钠击溃了啊老师低级开发那上课了；剪短发你看</p><h2 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h2><p>阿萨德；击溃了费那事；抵抗力发哪的顺口溜；妇女节课了；阿萨德南方；三大；凡事都；福克纳；丝黛芬妮；扣率</p><figure class="highlight plain"><figcaption><span>获取线下创建订单同步锁业务主键  */</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">private String getOfflineLockBusinessKey(OrderAndAccessoryBean order) &#123;</span><br><span class="line">    if (order == null || StringUtils.isBlank(order.getShopNo())) &#123;</span><br><span class="line">        throw new ServiceException(&quot;获取业务锁异常,参数异常!&quot;);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (StringUtils.isBlank(order.getOrderAliasNo())) &#123;</span><br><span class="line">        if (order.getPayment() == null || StringUtils.isBlank(order.getPayment().getPayCode())) &#123;</span><br><span class="line">            throw new ServiceException(&quot;获取业务锁异常,参数异常!&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    if (StringUtils.isNotBlank(order.getOrderAliasNo())) &#123;</span><br><span class="line">        return order.getShopNo() + order.getOrderAliasNo();</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return order.getPayment().getPayCode();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h4 id="运行时常量区"><a href="#运行时常量区" class="headerlink" title="运行时常量区"></a>运行时常量区</h4><p>阿萨德法师打发斯蒂芬击溃了；华数据看了；地方那快了；是妇女节课了；三复健科；三大复健科；你</p><ul><li>字面量</li><li>符号引用<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>啊；的时空裂缝急啊；卡死了打飞机你快乐；阿斯顿发你了；看的烦；那的方式来；那算了；打开</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;深入理解jvm内存区域&quot;&gt;&lt;a href=&quot;#深入理解jvm内存区域&quot; class=&quot;headerlink&quot; title=&quot;深入理解jvm内存区域&quot;&gt;&lt;/a&gt;深入理解jvm内存区域&lt;/h1&gt;&lt;h2 id=&quot;堆&quot;&gt;&lt;a href=&quot;#堆&quot; class=&quot;header
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我踩过的关于Mybatis的坑</title>
+    <link href="http://yoursite.com/2018/08/22/%E6%88%91%E8%B8%A9%E8%BF%87%E7%9A%84%E5%85%B3%E4%BA%8EMybatis%E7%9A%84%E5%9D%91/"/>
+    <id>http://yoursite.com/2018/08/22/我踩过的关于Mybatis的坑/</id>
+    <published>2018-08-22T09:17:14.000Z</published>
+    <updated>2018-08-22T09:38:02.137Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>Hi各位，这是我在GitHub Page的第一篇文章。没错，我终于在今天下定决心要写blog了，我希望能通过写blog来总结并回顾自己在开发中遇到的问题和经验，从而达到温故而知新的目标。</p><p>本篇blog将跟大家谈谈我在工作中Mybatis碰到比较棘手的问题，或者是有疑问的地方。</p><h3 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h3&gt;&lt;p&gt;Hi各位，这是我在GitHub Page的第一篇文章。没错，我终于在今天下定决心要写blog了，我希望能通过写blog来总结并回顾自己在开发
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
