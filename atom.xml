@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-05-10T04:01:30.980Z</updated>
+  <updated>2019-05-10T07:58:32.961Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2019/05/10/%E6%88%91%E6%89%80%E7%90%86%E8%A7%A3%E7%9A%84JVM%E5%86%85%E5%AD%98%E5%8C%BA%E5%9F%9F/"/>
+    <id>http://yoursite.com/2019/05/10/我所理解的JVM内存区域/</id>
+    <published>2019-05-10T07:23:03.450Z</published>
+    <updated>2019-05-10T07:58:32.961Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="我所理解的JVM内存区域"><a href="#我所理解的JVM内存区域" class="headerlink" title="我所理解的JVM内存区域"></a>我所理解的JVM内存区域</h1><h2 id="概况"><a href="#概况" class="headerlink" title="概况"></a>概况</h2><p>JVM的内存区域（运行时数据区）分为线程私有和线程公有两部分。</p><ul><li>线程私有：本地方法栈、虚拟机栈、程序计数器</li><li>线程公有：堆、方法区<h2 id="本地方法区"><a href="#本地方法区" class="headerlink" title="本地方法区"></a>本地方法区</h2>服务于虚拟机执行的Native方法<h2 id="虚拟机栈"><a href="#虚拟机栈" class="headerlink" title="虚拟机栈"></a>虚拟机栈</h2>服务于虚拟机执行的Java程序方法<h3 id="局部变量表"><a href="#局部变量表" class="headerlink" title="局部变量表"></a>局部变量表</h3>每个栈帧都存有操作数栈、动态链接、方法出口信息和局部变量表。局部变量表除了8中基本数据类型，4整形：byte、short、int、long；2浮点：float、double；字符：char；布尔：boolean外，还有reference：不同于对象本身，可能是一个指向对象起始地址的引用方针，也可能是指向一个代表对象的句柄或其他与此对象相关的信息。<h2 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h2>虚拟机执行字节码的行数<h2 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h2>Java程序可用的堆空间：新生代：Eden、From Survivor、To Survivor；老年代：Old Generation;元空间（永久代，jdk1.7的定义）<h2 id="方法区"><a href="#方法区" class="headerlink" title="方法区"></a>方法区</h2>存储被虚拟机加载的类信息、常量、静态变量以及即时编译器编译后的代码等数据。<h3 id="运行时常量池"><a href="#运行时常量池" class="headerlink" title="运行时常量池"></a>运行时常量池</h3>jdk1.7在方法区，jdk1.8在堆，存放编译器生成的各种字面量和符号引用。<h2 id="jvm创建对象的过程"><a href="#jvm创建对象的过程" class="headerlink" title="jvm创建对象的过程"></a>jvm创建对象的过程</h2></li></ul><ol><li>类加载检查</li><li>分配内存</li><li>初始化零值</li><li>设置对象头：对象的GC分代年龄、类型指针、类的元数据信息、对象的哈希码等。</li><li>执行init方法：java程序的赋值</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;我所理解的JVM内存区域&quot;&gt;&lt;a href=&quot;#我所理解的JVM内存区域&quot; class=&quot;headerlink&quot; title=&quot;我所理解的JVM内存区域&quot;&gt;&lt;/a&gt;我所理解的JVM内存区域&lt;/h1&gt;&lt;h2 id=&quot;概况&quot;&gt;&lt;a href=&quot;#概况&quot; class=&quot;
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>test2</title>
